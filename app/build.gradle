@@ -1,0 +1,64 @@
+plugins {
+    id 'com.android.application'
+    id 'com.google.gms.google-services'
+}
+
+android {
+    compileSdk 32
+
+    defaultConfig {
+        applicationId "com.example.smshelper"
+        minSdk 21
+        targetSdk 32
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.appcompat:appcompat:1.6.0-alpha03'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.3'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+
+    // Material ui dependencies
+    implementation 'com.google.android.material:material:1.5.0'
+
+    // firebase dependencies
+    implementation 'com.google.firebase:firebase-auth:19.3.2'
+    implementation 'com.google.firebase:firebase-database:20.0.4'
+
+    // country picker dependencies
+    implementation 'com.hbb20:ccp:2.6.0'
+
+    // Pinview dependencies
+    implementation 'io.github.chaosleung:pinview:1.4.4'
+
+    // location dependencies
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+    //loding animation dependencies
+    implementation 'com.github.fenjuly:SpinnerLoader:fd5b8ab578'
+
+//    def lottieVersion = "3.4.0"
+//    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    implementation 'com.airbnb.android:lottie:3.7.0'
+
+}
